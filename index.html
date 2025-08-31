@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Your One-Stop Shopping Destination</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>Shop</span>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to ShopHub</h1>
+            <p>Discover amazing products at unbeatable prices. From electronics to home essentials, we have everything
+                you need.</p>
+        </div>
+    </section>
+
+    <nav class="category-nav">
+        <div class="container">
+            <button class="category-btn active" data-category="all">All Products</button>
+            <button class="category-btn" data-category="electronics">Electronics</button>
+            <button class="category-btn" data-category="fashion">Fashion</button>
+            <button class="category-btn" data-category="fitness">Fitness Equipment</button>
+            <button class="category-btn" data-category="food">Food & Beverage</button>
+            <button class="category-btn" data-category="health">Health & Personal Care</button>
+            <button class="category-btn" data-category="home">Home & Kitchen</button>
+            <button class="category-btn" data-category="automation">Home Automation</button>
+            <button class="category-btn selected" data-category="sports">Sports & Fitness</button>
+        </div>
+    </nav>
+
+    <section class="products">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                Products will be dynamically loaded here
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            Cart items will be dynamically loaded here
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ShopHub</h4>
+                    <p>Your one-stop destination for quality products at great prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
